@@ -123,46 +123,53 @@
         
      <div class="col-xs-6">
        <div class="form-group  has-feedback">
-          <input class="form-control"  id="telp" name="tel" placeholder="Telp" type="text">
-        <span class="fa fa-tty form-control-feedback"></span>
+          <input class="form-control"  id="telp" name="tel" placeholder="Jumlah Sample" type="text" >
+        <span class="fa fa-book form-control-feedback"></span>
       </div>
      </div>
         
      <div class="col-xs-6">
        <div class="form-group  has-feedback">
-          <input class="form-control"  id="telp" name="telp" placeholder="Telp" type="text">
-        <span class="fa fa-tty form-control-feedback"></span>
+          <input class="form-control"  id="telp" name="telp" placeholder="Deskripsi sample" type="text">
+        <span class="fa fa-book form-control-feedback"></span>
       </div>
      </div>
      <div class="col-xs-6">
        <div class="form-group  has-feedback">
-          <input class="form-control"  id="telp" name="telp" placeholder="Telp" type="text">
-        <span class="fa fa-tty form-control-feedback"></span>
+          <input class="form-control"  id="telp" name="telp" placeholder="Bentuk" type="text">
+        <span class="fa fa-book form-control-feedback"></span>
       </div>
      </div>
         
      <div class="col-xs-6">
        <div class="form-group  has-feedback">
-          <input class="form-control"  id="telp" name="telp" placeholder="Telp" type="text">
-        <span class="fa fa-tty form-control-feedback"></span>
+          <input class="form-control"  id="telp" name="" placeholder="Berat / isi" type="text">
+        <span class="fa fa-book form-control-feedback"></span>
       </div>
      </div>
-        <div class="col-xs-6">
-       <div class="form-group  has-feedback">
-          <input class="form-control"  id="telp" name="telp" placeholder="Telp" type="text">
-        <span class="fa fa-tty form-control-feedback"></span>
-      </div>
+     <div class="col-xs-6">
+       <div class="input-group date" id="myDatepicker">
+           <input class="form-control" placeholder="tanggal penerimaan" type="text">
+                            <span class="input-group-addon" style="">
+                               <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
      </div>
         
      <div class="col-xs-6">
-       <div class="form-group  has-feedback">
-          <input class="form-control"  id="telp" name="telp" placeholder="Telp" type="text">
-        <span class="fa fa-tty form-control-feedback"></span>
-      </div>
+      <div class="input-group date" id="datetimepicker6">
+          <input class="form-control" placeholder="tanggal sampling" type="text">
+                            <span class="input-group-addon" style="">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
      </div>
-       
+    </div>
         
-    </div> 
+        
+        
+        
+        
         
         <div class="col-md-6">
             <p>Kaji ulang permintaan</p>
@@ -233,3 +240,4 @@
     
 
    </div>
+</div>
