@@ -187,46 +187,46 @@
             <div class="radio">
             <div class="col-xs-4">Kesiapan personel</div>
                    <div class="col-xs-3">
-                         <input checked="" value="option1" id="optionsRadios1" name="optionsRadios" type="radio"> Mampu 
+                         <input checked="" value="option1" id="optionsRadios1" name="optionsRadios3" type="radio"> Mampu 
                     </div>
                     <div class="col-xs-4">
-                     <input value="option2" id="optionsRadios2" name="optionsRadios" type="radio"> Tidak Mampu
+                     <input value="option2" id="optionsRadios2" name="optionsRadios3" type="radio"> Tidak Mampu
                    </div>
           </div>
             <div class="radio">
             <div class="col-xs-4">Kesiapan personel</div>
                    <div class="col-xs-3">
-                         <input checked="" value="option1" id="optionsRadios1" name="optionsRadios" type="radio"> Mampu 
+                         <input checked="" value="option1" id="optionsRadios4" name="optionsRadios" type="radio"> Mampu 
                     </div>
                     <div class="col-xs-4">
-                     <input value="option2" id="optionsRadios2" name="optionsRadios" type="radio"> Tidak Mampu
+                     <input value="option2" id="optionsRadios2" name="optionsRadios4" type="radio"> Tidak Mampu
                    </div>
           </div>
             <div class="radio">
             <div class="col-xs-4">Kesiapan personel</div>
                    <div class="col-xs-3">
-                         <input checked="" value="option1" id="optionsRadios1" name="optionsRadios" type="radio"> Mampu 
+                         <input checked="" value="option1" id="optionsRadios1" name="optionsRadios5" type="radio"> Mampu 
                     </div>
                     <div class="col-xs-4">
-                     <input value="option2" id="optionsRadios2" name="optionsRadios" type="radio"> Tidak Mampu
+                     <input value="option2" id="optionsRadios2" name="optionsRadios5" type="radio"> Tidak Mampu
                    </div>
           </div>
             <div class="radio">
             <div class="col-xs-4">Kesiapan personel</div>
                    <div class="col-xs-3">
-                         <input checked="" value="option1" id="optionsRadios1" name="optionsRadios" type="radio"> Mampu 
+                         <input checked="" value="option1" id="optionsRadios1" name="optionsRadios6" type="radio"> Mampu 
                     </div>
                     <div class="col-xs-4">
-                     <input value="option2" id="optionsRadios2" name="optionsRadios" type="radio"> Tidak Mampu
+                     <input value="option2" id="optionsRadios2" name="optionsRadios6" type="radio"> Tidak Mampu
                    </div>
           </div>
             <div class="radio">
             <div class="col-xs-4">Kesiapan personel</div>
                    <div class="col-xs-3">
-                         <input checked="" value="option1" id="optionsRadios1" name="optionsRadios" type="radio"> Mampu 
+                         <input checked="" value="option1" id="optionsRadios1" name="optionsRadios7" type="radio"> Mampu 
                     </div>
                     <div class="col-xs-4">
-                     <input value="option2" id="optionsRadios2" name="optionsRadios" type="radio"> Tidak Mampu
+                     <input value="option2" id="optionsRadios2" name="optionsRadios7" type="radio"> Tidak Mampu
                    </div>
           </div>
        </div>
