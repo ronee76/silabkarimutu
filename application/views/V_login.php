@@ -24,20 +24,18 @@
 
   <body class="login">
     <div>
-      <a class="hiddenanchor" id="signup"></a>
-      <a class="hiddenanchor" id="signin"></a>
 
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-             <form action="C_login" method="post" enctype="multipart/formdata">
+             <form action="<?php echo base_url('C_login/login');?>" method="post" enctype="multipart/formdata">
                <h1>Login</h1>
               
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                  <input name="email" type="email" class="form-control" placeholder="email" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                  <input name="password" type="password" class="form-control" placeholder="Password" required="" />
               </div>
               <div>
                   <button type="submit" name="btn_login" class="btn btn-default submit" >LOGIN</button>

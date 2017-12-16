@@ -1,3 +1,16 @@
+<?php
+
+$valid =  $this->session->all_userdata();
+
+$level    = $valid['level'];
+$status   = $valid['status'];
+$gambar   =$valid['gambar'];
+
+if($level == 'admin' || $level == 'user')
+
+ {
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -176,3 +189,9 @@
     <script src="<?php echo base_url('assets'); ?>/build/js/custom.min.js"></script>
   </body>
 </html>
+<?php
+}else{
+redirect('C_login');
+}
+
+?>   
