@@ -123,41 +123,33 @@
         
      <div class="col-xs-6">
        <div class="form-group  has-feedback">
-<<<<<<< HEAD
           <input class="form-control"  id="telp" name="tel" placeholder="Jumlah Sample" type="text" >
         <span class="fa fa-book form-control-feedback"></span>
-=======
           <input class="form-control"  id="telp" name="tel" placeholder="Jumlah Sampel" type="text">
-        
->>>>>>> 7eebad6dc7260c1152798066caeca7d061f6add4
       </div>
      </div>
         
      <div class="col-xs-6">
        <div class="form-group  has-feedback">
-<<<<<<< HEAD
+
           <input class="form-control"  id="telp" name="telp" placeholder="Deskripsi sample" type="text">
         <span class="fa fa-book form-control-feedback"></span>
-=======
+
           <input class="form-control"  id="telp" name="telp" placeholder="Deskripsi Sampel" type="text">
-        
->>>>>>> 7eebad6dc7260c1152798066caeca7d061f6add4
       </div>
      </div>
      <div class="col-xs-6">
        <div class="form-group  has-feedback">
           <input class="form-control"  id="telp" name="telp" placeholder="Bentuk" type="text">
-<<<<<<< HEAD
+
         <span class="fa fa-book form-control-feedback"></span>
-=======
-        
->>>>>>> 7eebad6dc7260c1152798066caeca7d061f6add4
+
       </div>
      </div>
         
      <div class="col-xs-6">
        <div class="form-group  has-feedback">
-<<<<<<< HEAD
+
           <input class="form-control"  id="telp" name="" placeholder="Berat / isi" type="text">
         <span class="fa fa-book form-control-feedback"></span>
       </div>
@@ -177,9 +169,7 @@
                             <span class="input-group-addon" style="">
                                     <span class="glyphicon glyphicon-calendar"></span>
                             </span>
-                        </div>
-=======
-          <input class="form-control"  id="telp" name="telp" placeholder="Berat/isi" type="text">
+                        </div>          <input class="form-control"  id="telp" name="telp" placeholder="Berat/isi" type="text">
         
       </div>
      </div>
@@ -195,7 +185,6 @@
           <input class="form-control"  id="telp" name="telp" placeholder="Tanggal Sampling" type="text">
         
       </div>
->>>>>>> 7eebad6dc7260c1152798066caeca7d061f6add4
      </div>
     </div>
         
@@ -274,11 +263,9 @@
     </div>
 <div class="x_panel">
     
-<<<<<<< HEAD
 
    </div>
 </div>
-=======
 <h5>Parameter Penyakit</h5>
 <div class="col-md-9 col-sm-9 col-xs-12">
                           <div class="checkbox">
@@ -324,4 +311,4 @@
     
 </div>
     </div>
->>>>>>> 7eebad6dc7260c1152798066caeca7d061f6add4
+
