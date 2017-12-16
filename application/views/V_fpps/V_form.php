@@ -123,26 +123,41 @@
         
      <div class="col-xs-6">
        <div class="form-group  has-feedback">
+<<<<<<< HEAD
           <input class="form-control"  id="telp" name="tel" placeholder="Jumlah Sample" type="text" >
         <span class="fa fa-book form-control-feedback"></span>
+=======
+          <input class="form-control"  id="telp" name="tel" placeholder="Jumlah Sampel" type="text">
+        
+>>>>>>> 7eebad6dc7260c1152798066caeca7d061f6add4
       </div>
      </div>
         
      <div class="col-xs-6">
        <div class="form-group  has-feedback">
+<<<<<<< HEAD
           <input class="form-control"  id="telp" name="telp" placeholder="Deskripsi sample" type="text">
         <span class="fa fa-book form-control-feedback"></span>
+=======
+          <input class="form-control"  id="telp" name="telp" placeholder="Deskripsi Sampel" type="text">
+        
+>>>>>>> 7eebad6dc7260c1152798066caeca7d061f6add4
       </div>
      </div>
      <div class="col-xs-6">
        <div class="form-group  has-feedback">
           <input class="form-control"  id="telp" name="telp" placeholder="Bentuk" type="text">
+<<<<<<< HEAD
         <span class="fa fa-book form-control-feedback"></span>
+=======
+        
+>>>>>>> 7eebad6dc7260c1152798066caeca7d061f6add4
       </div>
      </div>
         
      <div class="col-xs-6">
        <div class="form-group  has-feedback">
+<<<<<<< HEAD
           <input class="form-control"  id="telp" name="" placeholder="Berat / isi" type="text">
         <span class="fa fa-book form-control-feedback"></span>
       </div>
@@ -163,6 +178,24 @@
                                     <span class="glyphicon glyphicon-calendar"></span>
                             </span>
                         </div>
+=======
+          <input class="form-control"  id="telp" name="telp" placeholder="Berat/isi" type="text">
+        
+      </div>
+     </div>
+        <div class="col-xs-6">
+       <div class="form-group  has-feedback">
+          <input class="form-control"  id="telp" name="telp" placeholder="Tanggal Penerimaan" type="text">
+        
+      </div>
+     </div>
+        
+     <div class="col-xs-6">
+       <div class="form-group  has-feedback">
+          <input class="form-control"  id="telp" name="telp" placeholder="Tanggal Sampling" type="text">
+        
+      </div>
+>>>>>>> 7eebad6dc7260c1152798066caeca7d061f6add4
      </div>
     </div>
         
@@ -172,7 +205,7 @@
         
         
         <div class="col-md-6">
-            <p>Kaji ulang permintaan</p>
+            <h2>Kaji ulang permintaan</h2>
          <div class="radio">
             <div class="col-xs-4">Kesiapan personel</div>
                    <div class="col-xs-3">
@@ -183,7 +216,8 @@
                    </div>
           </div>
             <div class="radio">
-            <div class="col-xs-4">Kesiapan personel</div>
+                
+            <div class="col-xs-4">Kondisi Akomodasi</div>
                    <div class="col-xs-3">
                          <input checked="" value="option3" id="optionsRadios1" name="optionsRadios2" type="radio"> Mampu 
                     </div>
@@ -192,7 +226,7 @@
                    </div>
           </div>
             <div class="radio">
-            <div class="col-xs-4">Kesiapan personel</div>
+            <div class="col-xs-4">Beban Pekerjaan</div>
                    <div class="col-xs-3">
                          <input checked="" value="option1" id="optionsRadios1" name="optionsRadios3" type="radio"> Mampu 
                     </div>
@@ -201,7 +235,7 @@
                    </div>
           </div>
             <div class="radio">
-            <div class="col-xs-4">Kesiapan personel</div>
+            <div class="col-xs-4">Kondisi Peralatan</div>
                    <div class="col-xs-3">
                          <input checked="" value="option1" id="optionsRadios4" name="optionsRadios" type="radio"> Mampu 
                     </div>
@@ -210,7 +244,7 @@
                    </div>
           </div>
             <div class="radio">
-            <div class="col-xs-4">Kesiapan personel</div>
+            <div class="col-xs-4">Kesesuaian Metode</div>
                    <div class="col-xs-3">
                          <input checked="" value="option1" id="optionsRadios1" name="optionsRadios5" type="radio"> Mampu 
                     </div>
@@ -219,7 +253,7 @@
                    </div>
           </div>
             <div class="radio">
-            <div class="col-xs-4">Kesiapan personel</div>
+            <div class="col-xs-4">Kesesuaian Biaya</div>
                    <div class="col-xs-3">
                          <input checked="" value="option1" id="optionsRadios1" name="optionsRadios6" type="radio"> Mampu 
                     </div>
@@ -236,8 +270,58 @@
                      <input value="option2" id="optionsRadios2" name="optionsRadios7" type="radio"> Tidak Mampu
                    </div>
           </div>
-       </div>
+        </div>
+    </div>
+<div class="x_panel">
     
+<<<<<<< HEAD
 
    </div>
 </div>
+=======
+<h5>Parameter Penyakit</h5>
+<div class="col-md-9 col-sm-9 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="">Klinis
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value=""> Option two. select more than one options
+                            </label>
+                          </div>
+     <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value=""> Option one. select more than one options
+                            </label>
+                          </div>
+     <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value=""> Option one. select more than one options
+                            </label>
+                          </div>
+     <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value=""> Option one. select more than one options
+                            </label>
+                          </div>
+     <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value=""> Option one. select more than one options
+                            </label>
+                          </div>
+     <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value=""> Option one. select more than one options
+                            </label>
+                          </div>
+     <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value=""> Option one. select more than one options
+                            </label>
+                          </div>    
+    
+</div>
+    </div>
+>>>>>>> 7eebad6dc7260c1152798066caeca7d061f6add4
