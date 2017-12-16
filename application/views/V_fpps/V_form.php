@@ -349,4 +349,26 @@
 </div>
 
 </div>
-</div>
+<!--------------jenis sample ---------------->
+<div class="x_panel">
+        <div class="x_content">
+            <div class="col-md-4">
+      <div class="input-group">
+          <input class="form-control" id="customer"  placeholder="Diterbitkan Oleh :" name="jenis_sample" type="text">
+        </div>
+        </div>
+        <div class="col-md-4">
+      <div class="input-group">
+          <input class="form-control" id="customer"  placeholder="Diterima Oleh :" name="jenis_sample" type="text">
+        </div>
+        </div>
+           <div class="col-xs-2 pull-right">
+              <button type="reset" class="btn btn-warning btn-block btn-flat">Batal</button>
+          </div>
+     
+          <div class="col-xs-2 pull-right">
+              <button type="submit" name="btnDaftar" class="btn btn-primary btn-block btn-flat">Mendaftar</button>
+          </div>
+        </div>
+
+</div></div>
