@@ -7,7 +7,7 @@
                   <li><a><i class="fa fa-user"></i>FPPS <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                         <li><a href="<?php echo base_url(); ?>C_fpps/form_fpps">FORM</a></li>
-                        <li><a href="<?php echo base_url(); ?>C_admin/daftar_user">DAFTAR FPPS</a></li>
+                        <li><a href="<?php echo base_url(); ?>C_fpps/daftar_fpps">DAFTAR FPPS</a></li>
                     </ul>
                   </li>
                 </ul>

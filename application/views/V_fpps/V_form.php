@@ -15,7 +15,25 @@
         });
    
     });
-    </script>    
+    </script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#bakteri").click(function(){
+        
+          $("#show_bakteri").toggle();
+        });
+   
+    });
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#logam").click(function(){
+        
+          $("#show_logam").toggle();
+        });
+   
+    });
+    </script>
     
 <div class="modal modal-info fade in" id="modal-info" style="display: block; display: none; ;">
           <div class="modal-dialog">
@@ -70,13 +88,20 @@
     </script>
 <div class="x_panel">
 <div class="x_title">
+  
+ <!--------- end input customer--------------->     
+     
+ <form action="<?php echo base_url('C_fpps/simpan_fpps');?>" method="post" enctype="multipart/formdata">
     <h2>Form FPPS</h2>
-                
-  <div class="clearfix"></div>
-</div>
-  <div class="col-md-6">
+        <ul class="nav navbar-right panel_toolbox">
+           <li><input type="text" class="form-control" value="<?php echo $record;?>" readonly="" name="record_number" placeholder="record number" ></i></a>
+                </li>
+                    </ul>              
+<div class="clearfix"></div>
+ </div>
+    <div class="col-md-6">
       <div class="input-group">
-          <input class="form-control" id="id_customer"  placeholder="nama customer" name="id_customer" type="hidden">
+          <input class="form-control" id="id_customer"   name="id_customer" type="hidden">
           <input class="form-control" id="customer"  placeholder="nama customer" name="nama_customer" type="text">
               <span class="input-group-btn">
                  <button type="button" id="modal1" class="btn btn-primary"><span class="fa fa-plus"></span></button>
@@ -115,7 +140,7 @@
 
     <div class="col-md-6">
       <div class="input-group">
-          <input class="form-control" id="customer"  placeholder="Jenis Sample" name="jenis_sample" type="text">
+          <input class="form-control" id="data_sample"  placeholder="Jenis Sample" name="data_sample" type="text">
               <span class="input-group-btn">
                  <button type="button" id="" class="btn btn-primary"><span class="fa fa-plus"></span></button>
                </span>
@@ -123,33 +148,33 @@
         
      <div class="col-xs-6">
        <div class="form-group  has-feedback">
-          <input class="form-control"  id="telp" name="tel" placeholder="Jumlah Sample" type="text">
+          <input class="form-control"  id="jumlah_sample" name="jumlah_sample" placeholder="Jumlah Sample" type="text">
         <span class="fa fa-book form-control-feedback"></span>
       </div>
      </div>
         
      <div class="col-xs-6">
        <div class="form-group  has-feedback">
-          <input class="form-control"  id="telp" name="telp" placeholder="Deskripi Sample" type="text">
+          <input class="form-control"  id="deskripsi_sample" name="deskripsi_sample" placeholder="Deskripi Sample" type="text">
         <span class="fa fa-book form-control-feedback"></span>
       </div>
      </div>
      <div class="col-xs-6">
        <div class="form-group  has-feedback">
-          <input class="form-control"  id="telp" name="telp" placeholder="Bentuk" type="text">
+          <input class="form-control"  id="bentuk" name="bentuk" placeholder="Bentuk" type="text">
         <span class="fa fa-book form-control-feedback"></span>
       </div>
      </div>
         
      <div class="col-xs-6">
        <div class="form-group  has-feedback">
-          <input class="form-control"  id="telp" name="telp" placeholder="Berat isi" type="text">
+          <input class="form-control"  id="berat_isi" name="berat_isi" placeholder="Berat isi" type="text">
         <span class="fa fa-book form-control-feedback"></span>
       </div>
      </div>
         <div class="col-xs-6">
       <div class="input-group date" id="myDatepicker">
-                            <input class="form-control" type="text" placeholder="Tanggal penerimaan">
+          <input class="form-control" name="tgl_penerimaan" type="text" placeholder="Tanggal penerimaan">
                             <span class="input-group-addon" style="">
                                <span class="glyphicon glyphicon-calendar"></span>
                             </span>
@@ -158,70 +183,68 @@
         
      <div class="col-xs-6">
       <div class="input-group date" id="datetimepicker6">
-                            <input class="form-control" type="text" placeholder="Tanggal sampling">
+          <input class="form-control" type="text" name="tgl_sampling"placeholder="Tanggal sampling">
                             <span class="input-group-addon" style="">
                                     <span class="glyphicon glyphicon-calendar"></span>
                             </span>
                         </div>
      </div>
-       
-        
+  <!--------------------------------------------------------------->     
     </div> 
-        
         <div class="col-md-6">
             <h4>Kaji ulang permintaan</h4>
          <div class="radio">
             <div class="col-xs-4">Kesiapan personel</div>
                    <div class="col-xs-3">
-                         <input checked="" value="option1" id="optionsRadios1" name="optionsRadios1" type="radio"> Mampu 
+                     <input checked="" value="Mampu"  name="kesiapan_personel" type="radio"> Mampu 
                     </div>
                     <div class="col-xs-4">
-                     <input value="option2" id="optionsRadios2" name="optionsRadios1" type="radio"> Tidak Mampu
+                     <input value="Tidak Mampu"  name="kesiapan_personel" type="radio"> Tidak Mampu
                    </div>
           </div>
             <div class="radio">
             <div class="col-xs-4">Kondisi Akomodasi</div>
                    <div class="col-xs-3">
-                         <input checked="" value="option3" id="optionsRadios1" name="optionsRadios2" type="radio"> Mampu 
+                         <input checked="" value="Mampu" id="optionsRadios1" name="kondisi_akomodasi" type="radio"> Mampu 
                     </div>
                     <div class="col-xs-4">
-                     <input value="option4" id="optionsRadios2" name="optionsRadios2" type="radio"> Tidak Mampu
+                     <input value="Tidak Mampu" id="optionsRadios2" name="kondisi_akomodasi" type="radio"> Tidak Mampu
                    </div>
           </div>
             <div class="radio">
             <div class="col-xs-4">Beban pekerjaan</div>
                    <div class="col-xs-3">
-                         <input checked="" value="option1" id="optionsRadios1" name="optionsRadios3" type="radio"> Mampu 
+                         <input checked="" value="Mampu"  name="beban_pekerjaan" type="radio"> Mampu 
                     </div>
                     <div class="col-xs-4">
-                     <input value="option2" id="optionsRadios2" name="optionsRadios3" type="radio"> Tidak Mampu
+                     <input value="Tidak Mampu"  name="beban_pekerjaan" type="radio"> Tidak Mampu
                    </div>
           </div>
             <div class="radio">
             <div class="col-xs-4">Kondisi peralatan</div>
                    <div class="col-xs-3">
-                         <input checked="" value="option1" id="optionsRadios1" name="optionsRadios4" type="radio"> Mampu 
+                         <input checked="" value="Mampu"  name="kondisi_peralatan" type="radio"> Mampu 
                     </div>
                     <div class="col-xs-4">
-                     <input value="option2" id="optionsRadios2" name="optionsRadios4" type="radio"> Tidak Mampu
+                     <input value="Tidak Mampu" name="kondisi_peralatan" type="radio"> Tidak Mampu
                    </div>
           </div>
             <div class="radio">
             <div class="col-xs-4">Kesesuaian metode</div>
                    <div class="col-xs-3">
-                         <input checked="" value="option1" id="optionsRadios1" name="optionsRadios5" type="radio"> Mampu 
+                         <input checked="" value="Mampu"  name="kesesuaian_metode" type="radio"> Mampu 
                     </div>
                     <div class="col-xs-4">
-                     <input value="option2" id="optionsRadios2" name="optionsRadios5" type="radio"> Tidak Mampu
+                     <input value="Tidak Mampu" name="kesesuaian_metode" type="radio"> Tidak Mampu
                    </div>
           </div>
             <div class="radio">
             <div class="col-xs-4">Kesesuaian biaya</div>
                    <div class="col-xs-3">
-                         <input checked="" value="option1" id="optionsRadios1" name="optionsRadios6" type="radio"> Mampu 
+                         <input checked="" value="Mampu"  name="kesesuaian_biaya" type="radio"> Mampu 
                     </div>
                     <div class="col-xs-4">
-                     <input value="option2" id="optionsRadios2" name="optionsRadios6" type="radio"> Tidak Mampu
+                     <input value="Tidak Mampu"  name="kesesuaian_biaya" type="radio"> Tidak Mampu
                    </div>
           </div>
             
@@ -238,62 +261,64 @@
      <h4></h4>
        <div class="checkbox">
                 <label>
-                    <input value="" type="checkbox"> Klinis<br>
+                    <input value="Klinis" name="jenis_penyakit[]" type="checkbox"> Klinis<br>
                 </label>
            <label>
-                    <input value="" type="checkbox"> TSV<br>
+                    <input value="TSV" name="jenis_penyakit[]" type="checkbox"> TSV<br>
                 </label>
                 <label>
-                    <input value="" type="checkbox"> IMNV<br>
+                    <input value="IMNV" name="jenis_penyakit[]" type="checkbox"> IMNV<br>
                 </label>
                 <label>
-                    <input value="" type="checkbox"> KHV<br>
+                    <input value="KHV" name="jenis_penyakit[]" type="checkbox"> KHV<br>
                 </label>
                 <label>
-                    <input value="" type="checkbox"> VNN<br>
+                    <input value="VNN" name="jenis_penyakit[]" type="checkbox"> VNN<br>
                 </label>
                 <label>
-                    <input value="" type="checkbox"> Iridoviru<br>
+                    <input value="Iridoviru" name="jenis_penyakit[]" type="checkbox"> Iridoviru<br>
                 </label>
                 <label>
-                    <input value="" type="checkbox"> Megalocity <br>
+                    <input value="Megalocity" name="jenis_penyakit[]" type="checkbox"> Megalocity <br>
                 </label>
                 <label>
-                    <input value="" type="checkbox"> Wsspv<br>
+                    <input value="Wsspv" name="jenis_penyakit[]" type="checkbox"> Wsspv<br>
                 </label>
                 
                           </div>    
       </div> 
      <div class="col-md-2">
      <h4></h4>
-       <div class="checkbox">
+     
+       <div class="checkbox" >
                 <label>
-                    <input value="" type="checkbox"> Identifikasi Bakteri
+                    <input value="" id="bakteri" type="radio"> Identifikasi Bakteri
                 </label>
-           <label>
+           <div id="show_bakteri" style="display:none;">
+               <label>
                     <input value="" type="checkbox"> BAKTERI HPI / HPIK
                 </label>
                 <label>
-                    <input value="" type="checkbox"> E.Coli
+                    <input value="E.Coli" name="bakteri[]" type="checkbox"> E.Coli
                 </label><br>
                 <label>
-                    <input value="" type="checkbox"> Salmonelia
+                    <input value="Salmonelia" name="bakteri[]" type="checkbox"> Salmonelia
                 </label><br>
                 <label>
-                    <input value="" type="checkbox"> TPC
+                    <input value="TPC" name="bakteri[]" type="checkbox"> TPC
                 </label>
                
-                
-                          </div>    
+           </div>    
+          </div>    
       </div> 
      <div class="col-md-2">
      <h4></h4>
        <div class="checkbox">
                 <label>
-                    <input value="" type="checkbox"> Identifikasi Parasit
+                    <input value="Identifikasi parasit" name="identfikasi" type="checkbox"> Identifikasi Parasit
                 </label>
            <label>
-                    <input value="" type="checkbox"> Identifikasi Jamur
+                    <input value="identifikasi Jamur"name="identfikasi" type="checkbox"> Identifikasi Jamur
                 </label>
                 
                 
@@ -303,22 +328,25 @@
      <h4></h4>
        <div class="checkbox">
                 <label>
-                    <input value="" type="checkbox"> Logam Berat (AAS)
+                    <input value="" id="logam" type="radio"> Logam Berat (AAS)
                 </label><br>
+                <div id="show_logam" style="display:none;">
+           
            <label>
-                    <input value="" type="checkbox"> HG
+                    <input value="HG" name="logam" type="checkbox"> HG
                 </label><br>
             <label>
-                    <input value="" type="checkbox"> PB
+                    <input value="PB" name="logam" type="checkbox"> PB
                 </label><br>
             <label>
-                    <input value="" type="checkbox"> CD
+                    <input value="CD" name="logam" type="checkbox"> CD
                 </label><br>
                 
                  <label>
-                    <input value="" type="checkbox"> ...
+                    <input value="" name="logam" type="checkbox"> ...
                 </label>
-                          </div>    
+                </div>
+       </div>    
       </div> 
      
      <!-----pengujian sub kontrak---->
@@ -326,20 +354,20 @@
          <h4>Untuk pengujian yang di subkontrakan </h4>
          <div class="col-xs-6">
        <div class="form-group  has-feedback">
-          <input class="form-control"  id="telp" name="telp" placeholder="Nama lab" type="text">
+          <input class="form-control"  id="nama_lab_subkontrak" name="nama_lab_subkontrak" placeholder="Nama lab" type="text">
         <span class="fa fa-pencil form-control-feedback"></span>
       </div>
      </div>
         
      <div class="col-xs-6">
        <div class="form-group  has-feedback">
-          <input class="form-control"  id="telp" name="telp" placeholder="Parameter penyakit" type="text">
+          <input class="form-control"  id="parameter_penyakit_ikan" name="parameter_penyakit_ikan" placeholder="Parameter penyakit" type="text">
         <span class="fa fa-pencil form-control-feedback"></span>
       </div>
      </div>
          <div class="col-xs-6">
        <div class="form-group  has-feedback">
-          <input class="form-control"  id="telp" name="telp" placeholder="Kesimpulan" type="text">
+          <input class="form-control"  id="kesimpulan" name="kesimpulan" placeholder="Kesimpulan" type="text">
         <span class="fa fa-pencil form-control-feedback"></span>
       </div>
      </div>
@@ -347,27 +375,29 @@
      </div>
     
 </div>
-
 </div>
+
+
 <!--------------jenis sample ---------------->
 <div class="x_panel">
         <div class="x_content">
             <div class="col-md-4">
       <div class="input-group">
-          <input class="form-control" id="customer"  placeholder="Diterbitkan Oleh :" name="jenis_sample" type="text">
+          <input class="form-control" id="diberikan_oleh"  placeholder="Diberikan Oleh :" name="diberikan_oleh" type="text">
         </div>
         </div>
         <div class="col-md-4">
       <div class="input-group">
-          <input class="form-control" id="customer"  placeholder="Diterima Oleh :" name="jenis_sample" type="text">
+          <input class="form-control" id="diterima_oleh"  placeholder="Diterima Oleh :" name="diterima_oleh" type="text">
         </div>
         </div>
-           <div class="col-xs-2 pull-right">
+           <div class="col-xs-2 ">
               <button type="reset" class="btn btn-warning btn-block btn-flat">Batal</button>
           </div>
      
           <div class="col-xs-2 pull-right">
-              <button type="submit" name="btnDaftar" class="btn btn-primary btn-block btn-flat">Mendaftar</button>
+              <button type="submit" name="btn_fpps" class="btn btn-primary btn-block btn-flat">Mendaftar</button>
+          </form>
           </div>
         </div>
 
