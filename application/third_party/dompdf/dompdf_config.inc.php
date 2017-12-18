@@ -4,7 +4,7 @@
  * @link    http://www.dompdf.com/
  * @author  Benj Carson <benjcarson@digitaljunkies.ca>
  * @author  Helmut Tischer <htischer@weihenstephan.org>
- * @author  Fabien Ménager <fabien.menager@gmail.com>
+ * @author  Fabien Mï¿½nager <fabien.menager@gmail.com>
  * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
  * @version $Id: dompdf_config.inc.php 468 2012-02-05 10:51:40Z fabien.menager $
  */
@@ -273,7 +273,8 @@ def("DOMPDF_ENABLE_JAVASCRIPT", true);
  *
  * If this setting is set to true, DOMPDF will access remote sites for
  * images and CSS files as required.
- * This is required for part of test case www/test/image_variants.html through www/examples.php
+ * This is required for part of te
+ * st case www/test/image_variants.html through www/examples.php
  *
  * Attention!
  * This can be a security risk, in particular in combination with DOMPDF_ENABLE_PHP and
@@ -285,7 +286,7 @@ def("DOMPDF_ENABLE_JAVASCRIPT", true);
  *
  * @var bool
  */
-def("DOMPDF_ENABLE_REMOTE", false);
+def("DOMPDF_ENABLE_REMOTE", true);
 
 /**
  * The debug output log

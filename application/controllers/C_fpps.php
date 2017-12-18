@@ -226,29 +226,15 @@ $this->db->join('penjelasan_penerimaan_fpps','record_number_penjelasan = record_
     
 $query = $this->db->get();
 
-foreach($query->result_array() as $cetak);{
-     
-    $jadi = $cetak['data_sample'];
-    $jadi .= $cetak['jumlah_sample'];
-    $jadi .= $cetak['bentuk'];
-    $jadi .= $cetak['tgl_penerimaan'];
-    $jadi .= $cetak['tgl_sampling'];
-    $jadi .= $cetak['deskripsi_sample'];
-    $jadi .= $cetak['kesiapan_personel'];
-    $jadi .= $cetak['kondisi_akomodasi'];
-    $jadi .= $cetak['beban_pekerjaan'];
-    $jadi .= $cetak['kondisi_peralatan'];
-    $jadi .= $cetak['kesesuaian_metode'];
-    $jadi .= $cetak['kesesuaian_biaya'];
-    $jadi .= $cetak['nama_lab_subkontrak'];
-    $jadi .= $cetak['kesimpulan'];
-    $jadi .= $cetak['parameter_penyakit_ikan'];
-    $jadi .= $cetak['diberikan_oleh'];
-    $jadi .= $cetak['diterima_oleh'];
-    
-}
+
+
+$this->load->view('V_fpps/cetak',['query'=>$query]);
+            
+
+$html = ob_get_clean();
+
    $dompdf = new DOMPDF();
-   $dompdf->load_html($jadi);
+   $dompdf->load_html($html);
    $dompdf->set_paper("A4");
    $dompdf->render();
    $dompdf->stream('silabkarimutu'.'.pdf',array('Attachment'=>0));                
