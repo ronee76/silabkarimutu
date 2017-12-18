@@ -5,6 +5,7 @@ class C_fpps extends CI_Controller {
     
     public function __construct() {
         parent::__construct();
+        require_once (APPPATH.'third_party/dompdf/dompdf_config.inc.php');
           $this->load->helper('form');
         $this->load->library('session');
          $this->load->model('M_customer');
@@ -211,6 +212,50 @@ public function hapus_fpps(){
      
      
  }
+ public function cetak_fpps(){
+ $ambil = $this->uri->segment(3);    
+     
+$this->db->select('*');
+$this->db->from('customer_fpps');
+$this->db->where('record_number_customer',$ambil);
+$this->db->join('jenis_sample','record_number_sample = record_number_customer');
+$this->db->join('record_number','project_id = record_number_customer');
+$this->db->join('kaji_ulang_permintaan','record_number_kaji_ulang = record_number_customer');
+$this->db->join('penguji_subkontrak','record_number_penguji_subkontrak = record_number_customer');
+$this->db->join('penjelasan_penerimaan_fpps','record_number_penjelasan = record_number_customer');
+    
+$query = $this->db->get();
+
+foreach($query->result_array() as $cetak);{
+     
+    $jadi = $cetak['data_sample'];
+    $jadi .= $cetak['jumlah_sample'];
+    $jadi .= $cetak['bentuk'];
+    $jadi .= $cetak['tgl_penerimaan'];
+    $jadi .= $cetak['tgl_sampling'];
+    $jadi .= $cetak['deskripsi_sample'];
+    $jadi .= $cetak['kesiapan_personel'];
+    $jadi .= $cetak['kondisi_akomodasi'];
+    $jadi .= $cetak['beban_pekerjaan'];
+    $jadi .= $cetak['kondisi_peralatan'];
+    $jadi .= $cetak['kesesuaian_metode'];
+    $jadi .= $cetak['kesesuaian_biaya'];
+    $jadi .= $cetak['nama_lab_subkontrak'];
+    $jadi .= $cetak['kesimpulan'];
+    $jadi .= $cetak['parameter_penyakit_ikan'];
+    $jadi .= $cetak['diberikan_oleh'];
+    $jadi .= $cetak['diterima_oleh'];
+    
+}
+   $dompdf = new DOMPDF();
+   $dompdf->load_html($jadi);
+   $dompdf->set_paper("A4");
+   $dompdf->render();
+   $dompdf->stream('silabkarimutu'.'.pdf',array('Attachment'=>0));                
+       
+    }   
+     
+ 
 
 
 }
