@@ -20,26 +20,40 @@
     echo $cetak['data_sample'];
     echo $cetak['jumlah_sample'];
     echo $cetak['bentuk'];
+    echo $cetak['tgl_penerimaan'];
+    echo $cetak['tgl_sampling'];
+    echo $cetak['deskripsi_sample'];
+    echo $cetak['kesiapan_personel'];
+    echo $cetak['kondisi_akomodasi'];
+    echo $cetak['beban_pekerjaan'];
+    echo $cetak['kondisi_peralatan'];
+    echo $cetak['kesesuaian_metode'];
+    echo $cetak['kesesuaian_biaya'];
+    echo $cetak['nama_lab_subkontrak'];
+    echo $cetak['kesimpulan'];
+    echo $cetak['parameter_penyakit_ikan'];
+    echo $cetak['diberikan_oleh'];
+    echo $cetak['diterima_oleh'];
+    
+
+
     
 }
+  $ambil =$cetak['id_customer_fpps_customer'];
+  $data_customer = $this->db->get_where('customer',['id_customer'=>$ambil]);
+   
+   
+    foreach ($data_customer->result_array() as $data_cs){
+       
+    echo $data_cs['nama_customer'];
+    echo $data_cs['alamat'];
+    echo $$data_cs['telp'];
+   }
+       
+       
+
  
  ?>
-<?php echo $cetak['tgl_penerimaan'];
-      echo $cetak['tgl_sampling'];
-      echo $cetak['deskripsi_sample'];
-      echo $cetak['kesiapan_personel'];
-    echo$cetak['kondisi_akomodasi'];
-    echo$cetak['beban_pekerjaan'];
-    echo$cetak['kondisi_peralatan'];
-    echo$cetak['kesesuaian_metode'];
-    echo$cetak['kesesuaian_biaya'];
-    echo$cetak['nama_lab_subkontrak'];
-    echo$cetak['kesimpulan'];
-    echo$cetak['parameter_penyakit_ikan'];
-    echo$cetak['diberikan_oleh'];
-    echo$cetak['diterima_oleh'];
- ?>
 
-  <p align="center"><?php echo$cetak['diterima_oleh']; ?></p>  
 </body>
 </html>
