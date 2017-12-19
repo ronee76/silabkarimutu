@@ -39,15 +39,12 @@
 
     
 }
-  $ambil =$cetak['id_customer_fpps_customer'];
-  $data_customer = $this->db->get_where('customer',['id_customer'=>$ambil]);
    
-   
-    foreach ($data_customer->result_array() as $data_cs){
+foreach ($data_customer->result_array() as $data_cs){
        
     echo $data_cs['nama_customer'];
     echo $data_cs['alamat'];
-    echo $$data_cs['telp'];
+    echo $data_cs['telp'];
    }
        
        

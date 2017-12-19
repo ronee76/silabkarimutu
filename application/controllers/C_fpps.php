@@ -225,10 +225,17 @@ $this->db->join('penguji_subkontrak','record_number_penguji_subkontrak = record_
 $this->db->join('penjelasan_penerimaan_fpps','record_number_penjelasan = record_number_customer');
     
 $query = $this->db->get();
+foreach($query->result_array() as $cetak);{
+$id_customer = $cetak['id_customer_fpps_customer'];
+}
 
+/*---ambilcustomer */
 
-
-$this->load->view('V_fpps/cetak',['query'=>$query]);
+$customer_id = $id_customer;
+$data_customer = $this->db->get_where('customer',['id_customer'=>$customer_id]);
+   
+   
+$this->load->view('V_fpps/cetak',['query'=>$query,'data_customer'=>$data_customer]);
             
 
 $html = ob_get_clean();
