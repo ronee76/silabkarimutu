@@ -5,7 +5,7 @@ class C_fpps extends CI_Controller {
     
     public function __construct() {
         parent::__construct();
-        require_once (APPPATH.'third_party/dompdf/dompdf_config.inc.php');
+     //   require_once (APPPATH.'third_party/dompdf/dompdf_config.inc.php');
           $this->load->helper('form');
         $this->load->library('session');
          $this->load->model('M_customer');
@@ -213,8 +213,65 @@ public function hapus_fpps(){
      
  }
  public function cetak_fpps(){
- $ambil = $this->uri->segment(3);    
-     
+$this->load->library('Mypdf');
+
+$pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);     
+$pdf->SetCreator(PDF_CREATOR);
+
+$pdf->SetTitle('SILABKARIMUTU SYSTEM');
+
+$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE, PDF_HEADER_STRING);
+$pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+$pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+
+$pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
+$pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+$pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+$pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+$pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+
+$pdf->SetFont('times', 'BI', 12);
+
+$pdf->AddPage();
+
+$html ='<hr>';
+$html.= "<p align ='left'>{alamat}</p>";
+$html.= "<p align ='left'>{data_sample}</p>";
+$html.= "<p align ='left'>{jumlah_sample}</p>";
+$html.= "<p align ='left'>{bentuk}</p>";
+$html.= "<p align ='left'>{tgl_penerimaan}</p>";
+$html.= "<p align ='left'>{deskripsi_sample}</p>";
+$html.= "<p align ='left'>{tgl_sampling}</p>";
+$html.= "<p align ='left'>{kesiapan_personel}</p>";
+$html.= "<p align ='left'>{kondisi_akomodasi}</p>";
+$html.= "<p align ='left'>{beban_pekerjaan}</p>";
+$html.= "<p align ='left'>{kondisi_peralatan}</p>";
+$html.= "<p align ='left'>{kesesuaian_metode}</p>";
+$html.= "<p align ='left'>{kesesuaian_biaya}</p>";
+$html.= "<p align ='left'>{nama_lab_subkontrak}</p>";
+$html.= "<p align ='left'>{kesimpulan}</p>";
+$html.= "<p align ='left'>{parameter_penyakit_ikan}</p>";
+$html.= "<p align ='left'>{diberikan_oleh}</p>";
+$html.= "<p align ='left'>{diterima_oleh}</p>";
+$html.= "<p align ='left'>{nama_customer}</p>";
+$html.= "<p align ='left'>{alamat}</p>";
+$html.= "<p align ='left'>{telp}</p>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$ambil = $this->uri->segment(3);    
 $this->db->select('*');
 $this->db->from('customer_fpps');
 $this->db->where('record_number_customer',$ambil);
@@ -228,27 +285,39 @@ $query = $this->db->get();
 foreach($query->result_array() as $cetak);{
 $id_customer = $cetak['id_customer_fpps_customer'];
 }
-
-/*---ambilcustomer */
-
 $customer_id = $id_customer;
 $data_customer = $this->db->get_where('customer',['id_customer'=>$customer_id]);
-   
-   
-$this->load->view('V_fpps/cetak',['query'=>$query,'data_customer'=>$data_customer]);
-            
-
-$html = ob_get_clean();
-
-   $dompdf = new DOMPDF();
-   $dompdf->load_html($html);
-   $dompdf->set_paper("A4");
-   $dompdf->render();
-   $dompdf->stream('silabkarimutu'.'.pdf',array('Attachment'=>0));                
-       
-    }   
+foreach($query->result_array() as $cetak);{
+     $html = str_replace('{data_sample}',$cetak['data_sample'],$html);
+     $html = str_replace('{jumlah_sample}',$cetak['jumlah_sample'],$html);
+     $html = str_replace('{bentuk}',$cetak['bentuk'],$html);
+     $html = str_replace('{tgl_penerimaan}',$cetak['tgl_penerimaan'],$html);
+     $html = str_replace('{tgl_sampling}',$cetak['tgl_sampling'],$html);
+     $html = str_replace('{deskripsi_sample}',$cetak['deskripsi_sample'],$html);
+     $html = str_replace('{kesiapan_personel}',$cetak['kesiapan_personel'],$html);
+     $html = str_replace('{kondisi_akomodasi}',$cetak['kondisi_akomodasi'],$html);
+     $html = str_replace('{beban_pekerjaan}',$cetak['beban_pekerjaan'],$html);
+     $html = str_replace('{kondisi_peralatan}',$cetak['kondisi_peralatan'],$html);
+     $html = str_replace('{kesesuaian_metode}',$cetak['kesesuaian_metode'],$html);
+     $html = str_replace('{kesesuaian_biaya}',$cetak['kesesuaian_biaya'],$html);
+     $html = str_replace('{nama_lab_subkontrak}',$cetak['nama_lab_subkontrak'],$html);
+     $html = str_replace('{kesimpulan}',$cetak['kesimpulan'],$html);
+     $html = str_replace('{parameter_penyakit_ikan}',$cetak['parameter_penyakit_ikan'],$html);
+     $html = str_replace('{diberikan_oleh}',$cetak['diberikan_oleh'],$html);
+     $html = str_replace('{diterima_oleh}',$cetak['diterima_oleh'],$html);
+}
+foreach ($data_customer->result_array() as $data_cs){
+     $html = str_replace('{nama_customer}',$data_cs['nama_customer'],$html);
+     $html = str_replace('{alamat}',$data_cs['alamat'],$html);
+      $html = str_replace('{telp}',$data_cs['telp'],$html);
      
- 
+   }
+$pdf->writeHTML($html, true, false, true, false, '');
+   
 
+$pdf->Output('example_003.pdf', 'I');
+
+
+ }
 
 }
