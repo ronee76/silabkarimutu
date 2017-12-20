@@ -143,28 +143,16 @@ class C_fpps extends CI_Controller {
         );
          
         $this->db->insert('penjelasan_penerimaan_fpps',$penjelasan_penerimaan_fpps);
-        
-    //$jenis_penyakit = $_POST['jenis_penyakit'];
-      
-      //foreach ($jenis_penyakit as $jenis_penyakit=>$value ){
-          
-        //  $jenis = array(
-              
-          //  'jenis_penyakit'=>$value  
-         // );
-          // $this->db->insert('parameter_penyakit',$jenis);
-           
-      //}
-       
-   //$bakteri = $_POST['bakteri'];
-       
-     //  foreach ($bakteri as $bakteri=>$value ){
-          
-       //   $bakteri = array(
-          // /   
-           // 'bakteri'=>$value  
-         // /);
-           //$this->db->insert('parameter_penyakit',$bakteri);
+    
+    $bakteri = $_POST['bakteri'];
+    $jenis_penyakit = $_POST['jenis_penyakit'];
+    $i = 0 ;
+  
+    foreach ($bakteri as $kotoran){
+    $this->db->insert('parameter_penyakit',
+    array('identifikasi_bakteri'=>$kotoran,'jenis_penyakit'=>$jenis[$i]));
+    $i++;
+    }
        
         
            redirect('C_fpps/daftar_fpps');
@@ -236,7 +224,8 @@ $pdf->SetFont('times', 'BI', 12);
 $pdf->AddPage();
 
 $html ='<hr>';
-$html.= "<p align ='left'>{alamat}</p>";
+$html .= "<p align ='justify'>{alamat}</p>";
+
 $html.= "<p align ='left'>{data_sample}</p>";
 $html.= "<p align ='left'>{jumlah_sample}</p>";
 $html.= "<p align ='left'>{bentuk}</p>";
