@@ -231,11 +231,16 @@ $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
+<<<<<<< HEAD
 $pdf->SetFont('times', '', 12);
+=======
+$pdf->SetFont('times', 'BI', 12);
+>>>>>>> 512ac358cef03a36d62ac5ded422978f44367711
 
 $pdf->AddPage();
 
 $html ='<hr>';
+<<<<<<< HEAD
 $html.= "<p align ='center'>PERMINTAAN PENGAJUAN SAMPEL DAN KAJI ULANG PERMINTAAN</p>";
 $html.= "<p align ='left'>{alamat}</p>";
 $html.= "<p align ='left'>{data_sample}</p>";
@@ -244,6 +249,15 @@ $html.= "<p align ='left'>Dalam bentuuk : {bentuk}</p>";
 $html.= "<p align ='left'>{tgl_penerimaan}</p>";
 $html.= "<p align ='left'>{deskripsi_sample}</p>";
 $html.= "<p align ='right'>{tgl_sampling}</p>";
+=======
+$html.= "<p align ='left'>{alamat}</p>";
+$html.= "<p align ='left'>{data_sample}</p>";
+$html.= "<p align ='left'>{jumlah_sample}</p>";
+$html.= "<p align ='left'>{bentuk}</p>";
+$html.= "<p align ='left'>{tgl_penerimaan}</p>";
+$html.= "<p align ='left'>{deskripsi_sample}</p>";
+$html.= "<p align ='left'>{tgl_sampling}</p>";
+>>>>>>> 512ac358cef03a36d62ac5ded422978f44367711
 $html.= "<p align ='left'>{kesiapan_personel}</p>";
 $html.= "<p align ='left'>{kondisi_akomodasi}</p>";
 $html.= "<p align ='left'>{beban_pekerjaan}</p>";
