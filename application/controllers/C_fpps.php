@@ -219,6 +219,7 @@ $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
+$pdf->SetFont('times', '', 12);
 $pdf->SetFont('times', 'BI', 12);
 
 $pdf->AddPage();
@@ -226,6 +227,15 @@ $pdf->AddPage();
 $html ='<hr>';
 $html .= "<p align ='justify'>{alamat}</p>";
 
+$html.= "<p align ='center'>PERMINTAAN PENGAJUAN SAMPEL DAN KAJI ULANG PERMINTAAN</p>";
+$html.= "<p align ='left'>{alamat}</p>";
+$html.= "<p align ='left'>{data_sample}</p>";
+$html.= "<p align ='left'>{jumlah_sample}</p>";
+$html.= "<p align ='left'>Dalam bentuuk : {bentuk}</p>";
+$html.= "<p align ='left'>{tgl_penerimaan}</p>";
+$html.= "<p align ='left'>{deskripsi_sample}</p>";
+$html.= "<p align ='right'>{tgl_sampling}</p>";
+$html.= "<p align ='left'>{alamat}</p>";
 $html.= "<p align ='left'>{data_sample}</p>";
 $html.= "<p align ='left'>{jumlah_sample}</p>";
 $html.= "<p align ='left'>{bentuk}</p>";
